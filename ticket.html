@@ -1,0 +1,78 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<title>Playball</title>
+	<link rel="shortcut icon" type="image/png" sizes="16x16" href="logo.png" />
+
+	<meta name="author" content="playball"/>
+    <meta name="copyright" content="playball"/>
+	<meta name="title" content="Playball"/>
+	<meta name="description" content="Playball Watch"/>
+
+	<link rel="stylesheet" type="text/css" href="default.css"/>
+	<link rel="stylesheet" type="text/css" href="index.css"/>
+
+	<script src="jquery-1.11.2.min.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+	$(function(){
+		$(".add-ticket").on("click",function(){
+			$("#ticket-add-code").fadeIn(1000);
+		});
+		$("#back-ticket-add").on("click",function(){
+			$("#ticket-add-code").fadeOut(1000);
+		});
+		$("#ticket-add-bt").on("click",function(){
+			$("#ticket-add-code").fadeOut(1000);
+		});
+	});
+</script>
+<!--header-->
+	<header id="ticket-header">
+		<a href="index.html"><span class="back"></span></a>
+		<h1>티켓</h1>
+		<div class="add-ticket"></div>
+	</header>
+<!--article-->
+	<article id="ticket-main">
+		<div id="ticket-barcodes">
+			<sup>2015.11.11.수</sup>
+			<sup>수원KT위즈파크</sup>
+			<div><img src="" alt="barcode" id="barcode-img"></div>
+		</div>
+		<ul id="ticket-usage-record">
+			<li>티켓사용기록</li>
+			<li><sup>2015.11.07</sup><div>수원KT위즈파크</div><span>NC다이노스 VS KT 위즈</span></li>
+			<li><sup>2015.10.25</sup><div>마산야구장</div><span>NC다이노스 VS 롯데 자이언츠</span></li>
+			<li><sup>2015.10.15</sup><div>광주기아챔피언스필드</div><span>NC다이노스 VS KIA 타이거즈</span></li>
+			<li><sup>2015.09.07</sup><div>인천SK행복드림구장</div><span>NC다이노스 VS SK 와이번즈</span></li>
+			<li><sup>2015.09.03</sup><div>잠실야구장</div><span>NC다이노스 VS 두산 베어스</span></li>
+			<li><sup>2015.08.23</sup><div>목동야구장</div><span>NC다이노스 VS 넥센 히어로즈</span></li>
+		</ul>
+	</article>
+	<div id="ticket-add-code">
+		<header>
+			<span class="back" id="back-ticket-add"></span>
+			<h1>티켓</h1>
+		</header>
+		<article>
+			<div id="ticket-insert-code">
+				<h3>코드번호 입력하기</h3>
+				<form>
+					<input type="text" name="ticket-code1" value="SM08" max-lenth="4" id="form-code1" class="form-code"> -
+					<input type="text" name="ticket-code2" value="0207" id="form-code2" class="form-code"> -
+					<input type="text" name="ticket-code3" value="9313" id="form-code3" class="form-code"> -
+					<input type="password" name="ticket-code4" value="9682" id="form-code4" class="form-code">
+				</form>
+				<button type+"button" id="ticket-add-bt">확인</button>
+			</div>
+			<button id="ticket-bt">티켓구매하러가기</button>
+		</article>
+	</div>
+	<footer>
+	</footer>
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<title>Playball</title>
+	<link rel="shortcut icon" type="image/png" sizes="16x16" href="logo.png" />
+
+	<meta name="author" content="playball"/>
+    <meta name="copyright" content="playball"/>
+	<meta name="title" content="Playball"/>
+	<meta name="description" content="Playball Watch"/>
+
+	<link rel="stylesheet" type="text/css" href="default.css"/>
+	<link rel="stylesheet" type="text/css" href="index.css"/>
+
+	<script src="jquery-1.11.2.min.js"></script>
+</head>
+<body>
+<script>
+	$(function(){
+		$("#main-record-card-bt").on("click",function(){
+			$("#card-record-card").fadeIn(1000);
+		});
+		$("#main-record-Tmoney-bt").on("click",function(){
+			$("#card-record-Tmoney").fadeIn(1000);
+		});
+		$("#back-record-card").on("click",function(){
+			$("#card-record-card").fadeOut(1000);
+		});
+		$("#back-record-Tmoney").on("click",function(){
+			$("#card-record-Tmoney").fadeOut(1000);
+		});
+		$("#card-submit").on("click",function(){
+			$("#card-recorded").fadeIn(1000);
+		});
+		$("#Tmoney-submit").on("click",function(){
+			$("#card-recorded").fadeIn(1000);
+		});
+		$("#card-recorded-adds").on("click",function(){
+			$("#card-recorded").fadeOut(1000);
+			$("#card-record-card").fadeOut(1000);
+			$("#card-record-Tmoney").fadeOut(1000);
+		});
+	});
+</script>
+<!--header-->
+	<header id="card-header">
+		<a href="index.html"><span class="back"></span></a>
+		<h1>카드</h1>
+	</header>
+<!--article-->
+	<article id="card-main">
+		<h1>등록된 카드가 없습니다</h1>
+		<div id="main-record-card-bt">신용/체크카드 등록하기</div>
+		<div id="main-record-Tmoney-bt">티머니 등록하기</div>
+	</article>
+	<div id="card-record-card">
+		<header>
+			<span class="back" id="back-record-card"></span>
+			<h1>결제카드등록</h1>
+		</header>
+		<article id="card-record-card-form">
+			<div>결제 신용/체크카드를 등록해주세요.<sub>본인 명의의 카드만 등록이 가능합니다.</sub></div>
+			<form>
+				<ul>
+					<li><span target="card-record-form-1">카드번호</span><input type="text" value="" id="card-record-form-1" name="card-record-form-1"></li>
+					<li><span target="card-record-form-2">카드 유효기간</span><input type="text" value="" id="card-record-form-2" name="card-record-form-2"></li>
+					<li><span target="card-record-form-3">비밀번호 앞 2자리</span><input type="text" value="" id="card-record-form-3" name="card-record-form-3"></li>
+					<li><span target="card-record-form-4">카드 닉네임 설정</span><input type="text" value="" id="card-record-form-4" name="card-record-form-4"></li>
+				</ul>
+			</form>
+			<div class="card-submit" id="card-submit">등록하기</div>
+		</article>
+	</div>
+	<div id="card-record-Tmoney">
+		<header>
+			<span class="back" id="back-record-Tmoney"></span>
+			<h1>티머니등록</h1>
+		</header>
+		<article id="card-Tmoney-form">
+			<form>
+				<h3>아이디</h3>
+				<div class="card-Tmoney-login"><input type="text" name="TmoneyID" value="dandi10" id="TmoneyID"></div>
+				<h3>비밀번호</h3>
+				<div class="card-Tmoney-login"><input type="password" name="TmoneyPW" value="1111111" id="TmoneyPW"></div>
+			</form>
+			<div class="card-submit" id="Tmoney-submit">등록하기</div>
+		</article>
+	</div>
+	<div id="card-recorded">
+		<header>
+			<a href="index.html"><span class="back"></span></a>
+			<h1>잔액&사용기록확인하기</h1>
+			<div id="card-recorded-adds"></div>
+		</header>
+		<article id="card-recorded-form">
+			<h1>잔액</h1>
+			<div id="card-recorded-late">36,900원</div>
+			<ul>
+				<li>카드사용기록</li>
+				<li><sup>2015.11.07</sup><div>핫도그<span>2500원</span></div></li>
+				<li><sup>2015.10.25</sup><div>츄러스<span>1500원</span></div></li>
+				<li><sup>2015.10.15</sup><div>치킨 & 맥주<span>18500원</span></div></li>
+				<li><sup>2015.09.25</sup><div>햄버거세트<span>7500원</span></div></li>
+				<li><sup>2015.09.13</sup><div>핫도그<span>3600원</span></div></li>
+				<li><sup>2015.09.06</sup><div>핫바<span>1500원</span></div></li>
+			</ul>
+		</article>
+	</div>
+	<footer>
+	</footer>
+</body>
+</html>

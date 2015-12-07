@@ -1,0 +1,196 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<title>Playball</title>
+	<link rel="shortcut icon" type="image/png" sizes="16x16" href="logo.png" />
+
+	<meta name="author" content="playball"/>
+    <meta name="copyright" content="playball"/>
+	<meta name="title" content="Playball"/>
+	<meta name="description" content="Playball Watch"/>
+
+	<link rel="stylesheet" type="text/css" href="default.css"/>
+	<link rel="stylesheet" type="text/css" href="index.css"/>
+
+	<script src="jquery-1.11.2.min.js"></script>
+</head>
+<body>
+<script>
+	$(function(){
+		$(".emoticon-friend-select").on("click",function(){
+			$("#emoticon-friend-select").fadeIn(1000);
+		});
+		$("#send-emoticon").on("click",function(){
+			$("#emoticon-friend-select").fadeOut(2000);
+			$("#emoticon-talkroom-room").fadeIn(1000);
+		});
+		$("#emoticon-talkroom").on("click",function(){
+			$("#emoticon-talkroom-main").fadeIn(1000);
+		});
+		$("#emoticon-friends").on("click",function(){
+			$("#emoticon-talkroom-main").fadeOut(1000);
+		});
+		$(".join-talkroom").on("click",function(){
+			$("#emoticon-talkroom-room").fadeIn(1000);
+		});
+		$("#back-talkroom-main").on("click",function(){
+			$("#emoticon-talkroom-room").fadeOut(1000);
+		});
+		$("#fixed-emotion").on("click",function(){
+			$("#emotion-select").fadeIn(1000);
+		});
+		$("#emoticon-talkroom-addfriends").on("click",function(){
+			$("#add-friends").fadeIn(1000);
+		});
+		$("#back-add-friends").on("click",function(){
+			$("#add-friends").fadeOut(1000);
+		});
+		$("#add-friends-bt").on("click",function(){
+			$("#add-friends").fadeOut(1000);
+		});
+		$("#emotion-select li").on("click",function(){
+			$("#emotion-select").fadeOut(1000);
+		});
+	});
+</script>
+<!--header-->
+	<header>
+		<a href="index.html"><span class="back"></span></a>
+		<h1 class="back-to-h1">이모티콘</h1>
+	</header>
+<!--article-->
+	<div id="emoticon-main">
+		<span id="emoticon-friends">친구</span>
+		<span id="emoticon-talkroom">대화방</span>
+	</div>
+	<article id="emoticon-friend-main">
+	<form>
+		<div>
+			<input type="text" name="sreach-form" value="친구이름, 전화번호 검색" id="form-search">
+			<img src="image/search.png" alt="search-icon" id="emoticon-search">
+		</div>
+	</form>
+		<ul id="emoticon-profile">
+			<li>프로필</li>
+			<li>김단디</li>
+		</ul>
+		<ul id="emoticon-friends-list">
+			<li>친구</li>
+			<li class="emoticon-friend-select">김친구</li>
+			<li class="emoticon-friend-select">이친구</li>
+			<li class="emoticon-friend-select">박친구</li>
+			<li class="emoticon-friend-select">최친구</li>
+			<li class="emoticon-friend-select">조친구</li>
+			<li class="emoticon-friend-select">임친구</li>
+			<li class="emoticon-friend-select">신친구</li>
+			<li class="emoticon-friend-select">변친구</li>
+			<li class="emoticon-friend-select">양친구</li>
+			<li class="emoticon-friend-select">장친구</li>
+			<li class="emoticon-friend-select">구친구</li>
+			<li class="emoticon-friend-select">배친구</li>
+		</ul>
+	</article>
+	<div id="emoticon-friend-select">
+		<div>김친구</div>
+		<div id="send-emoticon">이모티콘보내기</div>
+	</div>
+	<article id="emoticon-talkroom-main">
+		<ul id="emoticon-talkroom-select">
+			<li><span class="join-talkroom"><span>김친구</span>
+				<div id="emti1"></div></span>
+			    <input type="checkbox" name="friendswitch1" class="onoffswitch-checkbox" id="friendswitch1" checked>
+			    <label class="onoffswitch-label" for="friendswitch1">
+			    <span class="onoffswitch-inner"></span>
+			    <span class="onoffswitch-switch"></span>
+			</li>
+			<li><span class="join-talkroom"><span>박친구</span>
+				<div id="emti2"></div></span>
+			    <input type="checkbox" name="friendswitch2" class="onoffswitch-checkbox" id="friendswitch2" checked>
+			    <label class="onoffswitch-label" for="friendswitch2">
+			    <span class="onoffswitch-inner"></span>
+			    <span class="onoffswitch-switch"></span>
+			</li>
+			<li><span class="join-talkroom"><span>최친구</span>
+				<div id="emti3"></div></span>
+			    <input type="checkbox" name="friendswitch3" class="onoffswitch-checkbox" id="friendswitch3" checked>
+			    <label class="onoffswitch-label" for="friendswitch3">
+			    <span class="onoffswitch-inner"></span>
+			    <span class="onoffswitch-switch"></span>
+			</li>
+			<li><span class="join-talkroom"><span>이친구</span>
+				<div id="emti4"></div></span>
+			    <input type="checkbox" name="friendswitch4" class="onoffswitch-checkbox" id="friendswitch4" checked>
+			    <label class="onoffswitch-label" for="friendswitch4">
+			    <span class="onoffswitch-inner"></span>
+			    <span class="onoffswitch-switch"></span>
+			</li>
+		</ul>
+	</article>
+	<div id="emoticon-talkroom-room">
+		<header>
+			<span class="back" id="back-talkroom-main"></span>
+			<h1>김친구</h1>
+			<div id="emoticon-talkroom-addfriends"></div>
+		</header>
+		<div>
+			<h4>김친구</h4>
+		</div>
+		<article>
+			<sup>김친구</sup>
+			<div class="emoticon-talkroom-emotion-you"></div>
+			<div class="emoticon-talkroom-emotion-you"></div>
+			<sub class="emoticon-talkroom-time-you">PM 9:00</sub>
+			<br/>
+			<div class="emoticon-talkroom-emotion-me"></div>
+			<sub class="emoticon-talkroom-time-me">PM 9:00</sub>
+			<div id="fixed-emotion"></div>
+			<ul id="emotion-select">
+				<li id="emoticon1"></li>
+				<li id="emoticon2"></li>
+				<li id="emoticon3"></li>
+				<li id="emoticon4"></li>
+				<li id="emoticon5"></li>
+				<li id="emoticon6"></li>
+				<li id="emoticon7"></li>
+				<li id="emoticon8"></li>
+				<li id="emoticon9"></li>
+				<li id="emoticon10"></li>
+				<li id="emoticon11"></li>
+			</ul>
+		</article>
+		<div id="add-friends">
+			<header>
+				<span class="back" id="back-add-friends"></span>
+				<h1>대화상대추가</h1>
+				<button type="button" id="add-friends-bt">확인</button>
+			</header>
+			<ul id="talk-person">
+				<li>대화하는사람</li>
+				<li>김단디</li>
+			</ul>
+			<ul id="talk-friends">
+				<li>친구</li>
+				<li>김친구</li>
+				<li>이친구</li>
+				<li>박친구</li>
+				<li>최친구</li>
+				<li>조친구</li>
+				<li>임친구</li>
+				<li>신친구</li>
+				<li>변친구</li>
+				<li>양친구</li>
+				<li>장친구</li>
+				<li>구친구</li>
+				<li>배친구</li>
+				<li>홍친구</li>
+				<li>황친구</li>
+			</ul>
+			</article>
+		</div>
+	</div>
+	<footer>
+	</footer>
+</body>
+</html>
