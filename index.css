@@ -4,7 +4,7 @@ body {
 	background-image: url(image/background.png);/*이미지제작후 적용*/
 	background-size:90%;
 	/*적용시켜서 디테일 조정*/
-	background-position: -120% 230%;
+	background-position: -120% 160%;
 	background-repeat: no-repeat;
 	background-color: white;/*추후 white*/
 }
@@ -31,7 +31,7 @@ header h1 {
 	background-size: cover;
 	display: inline-block;
 	width: 8%;
-	height: 80%;
+	height: 82%;
 	float: right;
 	margin-top: 1%;
 	margin-right: 2%;
@@ -97,7 +97,7 @@ header h1 {
 	width: 8%;
 	height: 80%;
 	background-color: transparent;
-	background-image: url(image/back.png);/*아이콘 만들고 적용시키거나 svg로 적용*/
+	background-image: url(image/back.png);
 	background-size: 100% 100%;
 	float: left;
 	margin-top: 1%;
@@ -416,6 +416,10 @@ button {
 #emoticon-friend-main {
 	width: 100%;
 	height: 100%;
+	background-image: url(image/background.png);
+	background-size: 80%;
+	background-repeat: no-repeat;
+	background-position: -40% 90%;
 }
 #emoticon-friend-main form {
 	width: 100%;
@@ -470,11 +474,91 @@ button {
 #emoticon-talkroom-main {
 	display: none;
 	position: absolute;
-	top: 15%;
+	top: 14.5%;
 	left: 0%;
 	width: 100%;
 	height: 100%;
 	background-color: white;
+}
+#emoticon-talkroom-main > div{
+	width: 100%;
+	height: 100%;
+	background-image: url(image/background.png);
+	background-repeat: no-repeat;
+	background-size: 80%;
+	background-position: -40% 42%;
+}
+.onoffswitch-talk {
+    position: relative;
+    width: 20%;
+    -webkit-user-select:none;
+	-moz-user-select:none;
+	-ms-user-select: none;
+}
+.onoffswitch-checkbox-talk {
+    display: none;
+}
+.onoffswitch-label-talk {
+    display: inline-block;
+    width: 25%;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    border: 2px solid #1d467c;
+    border-radius: 10px;
+    top: -20px;
+}
+.onoffswitch-inner-talk {
+    display: inline-block;
+    width: 200%;
+    margin-left: -100%;
+    transition: margin 0.3s ease-in 0s;
+}
+.onoffswitch-inner-talk:before, .onoffswitch-inner-talk:after {
+    display: inline-block; 
+    float: left; 
+    width: 50%; 
+    height: 14px;
+    padding: 0; 
+    line-height: 14px;
+    font-size: 14px; 
+    color: white; 
+    font-family: Trebuchet, Arial, sans-serif; 
+    font-weight: bold;
+    box-sizing: border-box;
+}
+.onoffswitch-inner-talk:before {
+	display: inline-block;
+    content: "ON";
+    padding-left: 10px;
+    background-color: transparent; 
+    color: #1d467c;
+}
+.onoffswitch-inner-talk:after {
+    content: "OFF";
+    padding-right: 10px;
+    background-color: transparent; 
+    color: #1d467c;
+    text-align: right;
+}
+.onoffswitch-switch-talk {
+    display: block; 
+    width: 15px; 
+    height: 15px;
+    margin: 0 6px;
+    background: #1d467c;
+    position: absolute; 
+    top: 3px; 
+    bottom: 0;
+    right: 80px;
+    border-radius: 20px;
+    transition: all 0.3s ease-in 0s; 
+}
+.onoffswitch-checkbox-talk:checked + .onoffswitch-label-talk .onoffswitch-inner-talk {
+    margin-left: 0;
+}
+.onoffswitch-checkbox-talk:checked + .onoffswitch-label-talk .onoffswitch-switch-talk {
+    right: 0px; 
 }
 #emoticon-talkroom-select {
 }
@@ -531,9 +615,17 @@ button {
 #emoticon-talkroom-room header h1 {
 	margin-left: -10%;
 }
+#emoticon-talkroom-room article {
+	width: 100%;
+	height: 100%;
+	background-image: url(image/background.png);
+	background-repeat: no-repeat;
+	background-size: 80%;
+	background-position: -39% 48.5%;
+}
 #emoticon-talkroom-addfriends {
 	width: 8.2%;
-	height: 80%;
+	height: 82%;
 	background-color: transparent;
 	background-image: url(image/adds.png);
 	background-size: cover;
@@ -597,7 +689,7 @@ button {
 }
 #fixed-emotion {
 	position: fixed;
-	bottom: 1%;
+	bottom: 26%;
 	right: 2%;
 	width: 15%;
 	height: 9%;
@@ -684,8 +776,7 @@ button {
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background-color: ivory;/*추후삭제*/
-	background-image: ;
+	background-color: white;
 }
 #add-friends h1 {
 	font-size: 1.3em;
@@ -726,6 +817,7 @@ button {
 }
 #ticket-main {
 	padding-top: 15%;
+	background-color: white;
 }
 #ticket-barcodes {
 	padding: 1.5% 3%;
@@ -742,7 +834,6 @@ button {
 	text-align: center;
 	width: 100%;
 	height: 40%;
-	background-color: skyblue;/*추후삭제*/
 }
 #barcode-img {
 	width: 70%;
@@ -830,14 +921,20 @@ button {
 #ticket-bt {
 	font-size: 1.2em;
 	padding: 4% 10%;
-	margin-top: 80%;
+	margin-top: 60%;
 }
 #card-header h1 {
 	margin-left: -20%;
 }
+#card-bg {
+	background-color: white;
+	width: 100%;
+	height: 800px;
+}
 #card-main {
 	padding-top: 53%;
 	text-align: center;
+	background-color: white;
 }
 #card-main h1 {
 	font-size: 1.5em;
@@ -910,7 +1007,7 @@ button {
 	background-color: #1d467c;
 	padding: 3% 5%;
 	margin-left: 10%;
-	margin-top: 50%;
+	margin-top: 30%;
 	font-size: 1.2em;
 }
 #card-record-Tmoney {
@@ -958,6 +1055,10 @@ button {
  #card-Tmoney-form input[type="password"] {
  	font-size: 1.5em;
  }
+#Tmoney-submit {
+	text-align: center;
+	margin-top: 25%;
+}
 #card-recorded {
 	display: none;
 	position: absolute;

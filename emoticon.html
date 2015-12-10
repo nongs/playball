@@ -28,9 +28,13 @@
 		});
 		$("#emoticon-talkroom").on("click",function(){
 			$("#emoticon-talkroom-main").fadeIn(1000);
+			$("#emoticon-friends").css({"color":"#1d467c", "background-color":"white"});
+			$("#emoticon-talkroom").css({"color":"white", "background-color":"#5b8eba"});
 		});
 		$("#emoticon-friends").on("click",function(){
 			$("#emoticon-talkroom-main").fadeOut(1000);
+			$("#emoticon-friends").css({"color":"white", "background-color":"#5b8eba"});
+			$("#emoticon-talkroom").css({"color":"#1d467c", "background-color":"white"});
 		});
 		$(".join-talkroom").on("click",function(){
 			$("#emoticon-talkroom-room").fadeIn(1000);
@@ -39,7 +43,7 @@
 			$("#emoticon-talkroom-room").fadeOut(1000);
 		});
 		$("#fixed-emotion").on("click",function(){
-			$("#emotion-select").fadeIn(1000);
+			$("#emotion-select").slideToggle(1000);
 		});
 		$("#emoticon-talkroom-addfriends").on("click",function(){
 			$("#add-friends").fadeIn(1000);
@@ -97,36 +101,38 @@
 		<div id="send-emoticon">이모티콘보내기</div>
 	</div>
 	<article id="emoticon-talkroom-main">
+		<div>
 		<ul id="emoticon-talkroom-select">
 			<li><span class="join-talkroom"><span>김친구</span>
 				<div id="emti1"></div></span>
-			    <input type="checkbox" name="friendswitch1" class="onoffswitch-checkbox" id="friendswitch1" checked>
-			    <label class="onoffswitch-label" for="friendswitch1">
-			    <span class="onoffswitch-inner"></span>
-			    <span class="onoffswitch-switch"></span>
+			    <input type="checkbox" name="friendswitch1" class="onoffswitch-checkbox-talk" id="friendswitch1" checked>
+			    <label class="onoffswitch-label-talk" for="friendswitch1">
+			    <span class="onoffswitch-inner-talk"></span>
+			    <span class="onoffswitch-switch-talk"></span>
 			</li>
 			<li><span class="join-talkroom"><span>박친구</span>
 				<div id="emti2"></div></span>
-			    <input type="checkbox" name="friendswitch2" class="onoffswitch-checkbox" id="friendswitch2" checked>
-			    <label class="onoffswitch-label" for="friendswitch2">
-			    <span class="onoffswitch-inner"></span>
-			    <span class="onoffswitch-switch"></span>
+			    <input type="checkbox" name="friendswitch2" class="onoffswitch-checkbox-talk" id="friendswitch2" checked>
+			    <label class="onoffswitch-label-talk" for="friendswitch2">
+			    <span class="onoffswitch-inner-talk"></span>
+			    <span class="onoffswitch-switch-talk"></span>
 			</li>
 			<li><span class="join-talkroom"><span>최친구</span>
 				<div id="emti3"></div></span>
-			    <input type="checkbox" name="friendswitch3" class="onoffswitch-checkbox" id="friendswitch3" checked>
-			    <label class="onoffswitch-label" for="friendswitch3">
-			    <span class="onoffswitch-inner"></span>
-			    <span class="onoffswitch-switch"></span>
+			    <input type="checkbox" name="friendswitch3" class="onoffswitch-checkbox-talk" id="friendswitch3" checked>
+			    <label class="onoffswitch-label-talk" for="friendswitch3">
+			    <span class="onoffswitch-inner-talk"></span>
+			    <span class="onoffswitch-switch-talk"></span>
 			</li>
 			<li><span class="join-talkroom"><span>이친구</span>
 				<div id="emti4"></div></span>
-			    <input type="checkbox" name="friendswitch4" class="onoffswitch-checkbox" id="friendswitch4" checked>
-			    <label class="onoffswitch-label" for="friendswitch4">
-			    <span class="onoffswitch-inner"></span>
-			    <span class="onoffswitch-switch"></span>
+			    <input type="checkbox" name="friendswitch4" class="onoffswitch-checkbox-talk" id="friendswitch4" checked>
+			    <label class="onoffswitch-label-talk" for="friendswitch4">
+			    <span class="onoffswitch-inner-talk"></span>
+			    <span class="onoffswitch-switch-talk"></span>
 			</li>
 		</ul>
+		</div>
 	</article>
 	<div id="emoticon-talkroom-room">
 		<header>
@@ -158,6 +164,14 @@
 				<li id="emoticon9"></li>
 				<li id="emoticon10"></li>
 				<li id="emoticon11"></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
 			</ul>
 		</article>
 		<div id="add-friends">
@@ -166,6 +180,7 @@
 				<h1>대화상대추가</h1>
 				<button type="button" id="add-friends-bt">확인</button>
 			</header>
+			<article>
 			<ul id="talk-person">
 				<li>대화하는사람</li>
 				<li>김단디</li>
