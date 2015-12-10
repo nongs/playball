@@ -413,6 +413,11 @@ button {
 	background-color: white;
 	color: #1d467c;
 }
+#emoticon-bg {
+	width:100%;
+	height: 100%;
+	background-color: white;
+}
 #emoticon-friend-main {
 	width: 100%;
 	height: 100%;
