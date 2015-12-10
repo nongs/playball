@@ -1,8 +1,11 @@
 body {
 	width: 100%;
 	height: 100%;
-	background-image: ;/*이미지제작후 적용*/
-	background-origin: ;/*적용시켜서 디테일 조정*/
+	background-image: url(image/background.png);/*이미지제작후 적용*/
+	background-size:90%;
+	/*적용시켜서 디테일 조정*/
+	background-position: -120% 230%;
+	background-repeat: no-repeat;
 	background-color: white;/*추후 white*/
 }
 header {
@@ -56,15 +59,16 @@ header h1 {
 	vertical-align: middle;
 	background-color: #1d467c;
 }
-#main-menu li span {
-	display: inline-block;
-	width: 10%;
-	height: 80%;
+#main-menu li div {
+	position: relative;
+	width: 30px;
+	height: 30px;
 	background-color: transparent;
-	background-image: ;/*야구 아이콘만들어서 넣거나 svg로 변환하여서 적용*/
+	background-image: url(image/ball.png);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
 	float: left;
 	margin-left: 2%;
-	background-color: red;/*추후삭제*/
 }
 #main-menu li p {
 	font-family: ;/*폰트 물어봐서 파일받아 로컬로 적용시키기*/
@@ -78,6 +82,7 @@ header h1 {
 	left: 0;
 	width: 100%;
 	height: 100%;
+	background-color: white;
 }
 #setup-header {
 	padding: 2% 0 2% 0;
@@ -110,9 +115,11 @@ header h1 {
 	height: 100%;
 	padding-left: 6%;
 	padding-right: -6%;
-	background-image: ;
-	background-size: ;
-	background-origin: ;
+	background-color: white;
+	background-image: url(image/background.png);
+	background-size: 88%;
+	background-position: -120% 102%;
+	background-repeat: no-repeat;
 	text-align: none;
 	background-color: rgba(29, 70, 124, .5);
 }
@@ -196,6 +203,7 @@ button {
     cursor: pointer;
     border: 2px solid #1d467c;
     border-radius: 10px;
+    top: 0px;
 }
 .onoffswitch-inner {
     display: inline-block;
